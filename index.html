@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Kanit", sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #navbarSupportedContent ul li {
+        font-size: 14px;
+    }
+
+    #navbarSupportedContent ul li :hover {
+        background-color: rgb(224, 203, 81);
+        transition: all 0.7s ease;
+        color: black;
+        /* text-decoration: underline; */
+    }
+
+    .col-md-4 {
+        overflow: hidden;
+    }
+
+    .col-md-4 img {
+        transition: all 0.7s ease;
+    }
+
+    .col-md-4:hover img {
+        transform: scale(1.2);
+    }
+
+    .inner-img {
+        overflow: hidden;
+    }
+
+    .inner-img img {
+        transition: all 1s ease;
+    }
+
+    .inner-img:hover img {
+        transform: scale(1.1);
+    }
+
+    .card-body h5 {
+        font-size: 15px;
+    }
+
+    .card-body a {
+        font-size: 15px;
+    }
+
+    #display-img :hover {
+        transform: scale(1.03);
+        transition: all 0.5s ease-out;
+    }
+
+    .col-lg-12 p span {
+        color: red;
+    }
+
+    .col-lg-12 p {
+        font-size: 15px;
+    }
+
+    #footer p {
+        font-size: 15px;
+    }
+
+    /* navbar resp */
+    @media screen and (max-width: 1039px) {
+        #navbarSupportedContent ul li {
+            font-size: 13px;
+        }
+    }
+
+    /* navbar resp */
+
+    /* for signup form  css */
+
+    .container12 {
+        /* max-width: 400px; */
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .error-message {
+        color: red;
+        margin-top: 5px;
+    }
+
+    .success-message {
+        color: green;
+        margin-top: 5px;
+    }
+
+    .submit-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* for login form css */
+
+    .container34 {
+        /* max-width: 400px; */
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .error-message {
+        color: red;
+        margin-top: 5px;
+    }
+
+    .submit-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <!-- The website start from here -->
+
+    <div class="container-fluid">
+        <!-- start header -->
+        <div class="row" data-aos="zoom-out" data-aos-duration="700">
+            <div class="col-lg-2 mt-3" style="display: flex; justify-content: space-evenly">
+                <img style="
+              display: block;
+              margin: auto;
+              background-color: white;
+              transition: background-color 300ms;
+              height: 35px;
+            " src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042" />
+            </div>
+            <div class="col-lg-8 mt-3" style="display: flex; justify-content: space-evenly">
+                <div class="input-group mb-3">
+                    <input style="border: 1px solid black; border-radius: 40px" type="text" class="form-control"
+                        placeholder="SEARCH...." aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <button style="
+                border: 1px solid black;
+                border-radius: 40px;
+                margin-left: 10px;
+              " class="btn btn-outline-secondary" type="button" id="button-addon2">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- header end -->
+
+        <!-- modal for sign up -->
+        <div class="modal fade" id="exampleModa-signup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container12">
+                        <h2>Signup Form</h2>
+                        <form name="signupForm" onsubmit="return validateForm()" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required />
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Sign Up" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="chek-box mt-5" style="
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              ">
+                        <input style="margin-top: -14px; margin-right: 15px" type="checkbox" />
+                        <p style="color: rgb(98, 98, 241)">
+                            I accept the Term & Use & privacy policy
+                        </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px">
+                            ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal for sign up end -->
+
+        <!-- modal login up -->
+        <div class="modal fade" id="exampleModa-login" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container34">
+                        <h2>Login Form</h2>
+                        <form name="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username1" name="username" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password1" name="password" required />
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Login" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="chek-box mt-3" style="
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              ">
+                        <input style="margin-top: -14px; margin-right: 15px" type="checkbox" />
+                        <p style="color: rgb(98, 98, 241)">
+                            I accept the Term & Use & privacy policy
+                        </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px">
+                            ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal for login end -->
+
+        <!-- start nav-bar -->
+
+        <div class="row sticky-top">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar navbar navbar-light" style="background-color: #f9fcfd">
+                    <div class="container-fluid">
+                        <!-- <a class="navbar-brand" href="#">
+                            img icon
+                            <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                                src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+                            img icon end
+                        </a> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\shampoo.html">Shampoo</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\haircream.html">Hair
+                                                cream</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\Conditioner.html">Conditioners</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\Hair Mask.html">Masks</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\Hair Serum.html">Serums</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\Spray.html">Hairsprays</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\Hair oils.html">hair
+                                                oils </a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Equipment
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Dryer.html">Hair Dryer</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Straightner.html">Hair Straightener/Flat
+                                                Iron</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Spray Bottles.html">Spray bottles</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Hair Steamers.html">Steamers</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Hair Massagers.html">Massagers</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Spa Caps.html">Spa caps</a></li>
+                                        <li><a class="dropdown-item" href="..\HTML\Blogs\html\compnywise.html">Top Branded Equipments</a></li>
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=".\Contact us\contact.html">Contact Us</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#remedies">Home Remedies</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Treatments
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href=".\Treatment\Treatment-DANDRUFF.html">For
+                                                Dandruff</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href=".\Treatment\treatment-baldness.html">For
+                                                Baldness</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href=".\Treatment\treatment-HAIRFALL.html">For
+                                                Hair-Fall</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\Blogs\html\equi-compare.html">Comparision</a></li>
+                                        <li><a class="dropdown-item" href=".\Blogs\html\remedy.html">Remedies</a></li>
+                                        <li><a class="dropdown-item" href=".\Blogs\html\blog.html">Latest Info</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=".\Gallery.html">Gallery</a>
+                                </li>
+                            </ul>
+                            <!-- for signup and login -->
+                            <div class="row">
+                                <div class="col-lg-2" id="signup" style="display: flex; justify-content: space-around">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-signup"><img
+                                            src=".\icons\add-user.png" alt="" height="25px" /></a>
+                                </div>
+
+                                <div class="col-lg-2" id="login" style="display: flex; justify-content: space-around">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-login"><img
+                                            src=".\icons\log-in.png" alt="" height="38px" /></a>
+                                </div>
+
+                                <div class="col-lg-8" style="display: flex; justify-content: space-around">
+                                    <a class="sale" href="#" style="text-decoration: none; color: red">Sale UpTo50%</a>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- end nav-bar -->
+
+        <!-- Carousel start -->
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src=".\IMG\Untitled design (3).png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".\IMG\2.png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".\IMG\3.png" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel end -->
+
+        <!-- product's items showing -->
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm 12 col-md-6 col-lg-6" data-aos="flip-right"
+                    style="display: flex; justify-content: space-around">
+                    <a href="#" id="display-img" class="img-fluid"><img src=".\IMG\Imran pagal.jpg"
+                            width="100%;"  style="
+                  border-radius: 50px;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                " /></a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6" data-aos="zoom-in">
+                    <a href=" .\Gallery.html" style="text-decoration: none;">
+                        <h2 style="
+                  text-align: center;
+                  cursor: pointer;
+                  margin-top: 90px;
+                  color: #e47911;
+                  font-size: 23px;
+                ">
+                            VIEW All HAIRCARE ITEMS
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+            <!-- list -->
+
+            <!-- first row -->
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                    <h1 style="text-decoration: underline; color: rgb(187, 86, 86)">
+                        <strong><span style="color: black"> BESTSELLERS</span></strong>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img5.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img3.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img2.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\facebook-ad-(carousel)-600x600 (4).jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\1250587-1.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <!-- first row end-->
+
+            <!-- second row -->
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img5.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img3.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img2.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\img.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\facebook-ad-(carousel)-600x600 (4).jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\1250587-1.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second row end -->
+
+            <!-- product's items end -->
+
+            <!-- product bannners start -->
+
+            <div class="row gy-3 mt-4">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="display: flex; justify-content: space-around">
+                    <img class="img-fluid" src=".\IMG\banner1.jpg" style="
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              " />
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="display: flex; justify-content: space-around">
+                    <img class="img-fluid" src=".\IMG\banner2.jpg.jpg" style="
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              " />
+                </div>
+            </div>
+
+            <div class="row gy-3 mt-4">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="zoom-out" data-aos-duration="900"
+                    style="display: flex; justify-content: space-around">
+                    <img class="img-fluid" src=".\IMG\banner3.jpg.jpg" style="
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              " />
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="zoom-out-down" data-aos-duration="900"
+                    style="display: flex; justify-content: space-around">
+                    <img class="img-fluid" src=".\IMG\banner4.jpg.jpg" style="
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              " />
+                </div>
+            </div>
+
+            <!-- product bannners end -->
+
+            <!-- trending section -->
+
+            <div class="row" data-aos="fade-down">
+                <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                    <h1 style="text-decoration: underline; color: rgb(187, 86, 86)">
+                        <strong><span style="color: black">TRENDING NOW!</span></strong>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\009531113470_1_a3e5fda8-e30f-4540-a4a3-0ed196657d10.webp"
+                                class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out"
+                    data-aos-duration="900" style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\009531117188_1_4fb1cc66-6307-4017-a42b-0c082dbdf85c.webp"
+                                class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\untitled-1_0014_009531132723_c9d72eaf-56dd-4a39-8019-ae2a6de8d17c.webp"
+                                class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="fade-down"
+                    data-aos-duration="900" style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\kenu-1668722729488.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-out"
+                    data-aos-duration="900" style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\t-6.jpg.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="900"
+                    style="text-align: center">
+                    <div class="card">
+                        <div class="inner-img">
+                            <img src=".\IMG\1250587-1.jpg" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paul Mitchell</h5>
+                            <p class="card-text">Rs.7,295.00</p>
+                            <a href="..\HTML\Blogs\html\product_detailing.html" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- trending section end-->
+
+            <!-- home remedies section -->
+
+            <div class="row" id="remedies">
+                <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                    <h1 style="text-decoration: underline; color: rgb(187, 86, 86)">
+                        <strong><span style="color: black">HOW CAN YOU PROTECT YOUR HAIR</span></strong>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- list -->
+
+            <div class="row mt-5">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\pexels-samer-daboul-1652001.jpg" class="img-fluid" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Coconut oil</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Moisturizes and nourishes the hair. Helps prevent protein
+                                        loss from the hair shaft. Adds shine and luster to the
+                                        hair. Can help reduce dandruff and dry scalp.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">How to Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Aloe vera.jpg (2).jpg" class="img-fluid" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aloe vera</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Soothes an irritated scalp. Moisturizes and hydrates the
+                                        hair. Promotes hair growth. Helps control dandruff and
+                                        itching.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal2">How to Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Egg mask.jpg.jpg" class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Egg mask</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Provides essential proteins to strengthen the hair. Makes
+                                        the hair soft, smooth, and shiny. Helps repair and restore
+                                        damaged hair. Nourishes the scalp and promotes healthy
+                                        hair growth.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">How to Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\yogurt and honey.jpg.jpg" class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Yogurt and honey</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Conditions and moisturizes the hair. Adds shine and
+                                        softness to the hair. Helps reduce frizz and dryness.
+                                        Soothes an itchy scalp and reduces inflammation.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal2">How to Apply</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Apple cider vinegar (ACV) rinse.jpg.jpg"
+                                    class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple cider vinegar (ACV) rinse:</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Balances the pH of the scalp. Helps remove product buildup
+                                        and excess oil. Adds shine and improves hair texture.
+                                        Soothes scalp conditions like dandruff and itching.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">How to Apply</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="700"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Olive oil.jpg.jpg" class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Olive oil</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Conditions and moisturizes the hair. Helps repair split
+                                        ends and prevent breakage. Adds shine and softness to the
+                                        hair. Nourishes the scalp and promotes a healthy
+                                        environment for hair growth.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal2">How to Apply</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="400"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Fenugreek seeds.jpg.jpg" class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fenugreek seeds</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Stimulates hair growth and helps prevent hair loss.
+                                        Strengthens the hair follicles. Conditions and moisturizes
+                                        the hair. Adds shine and luster to the hair.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">How to Apply</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-4 mt-lg-0" data-aos="fade-down" data-aos-duration="400"
+                    style="display: flex; justify-content: space-around">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=".\IMG\Green tea rinse.jpg.jpg" class="img-fluid rounded-start" alt="..." />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Green tea rinse</h5>
+                                    <h6 style="color: green" class="card-title">Benefits</h6>
+                                    <p class="card-text">
+                                        Stimulates hair growth and reduces hair shedding. Adds
+                                        shine and strengthens the hair. Helps soothe an irritated
+                                        scalp. Protects the hair from damage caused by free
+                                        radicals.
+                                    </p>
+                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal2">How to Apply</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end -->
+
+            <!-- home remedies section end -->
+
+            <!-- modal section -->
+
+            <!-- Modal -->
+
+            <!--for Coconut oil -->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: blue">
+                                <b> How To Apply</b>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="text-align: center; color: black">
+                            Start with dry or slightly damp hair. You can also apply coconut
+                            oil to wet hair, but it may be easier to distribute when the
+                            hair is slightly dry.<br />
+
+                            Take a small amount of coconut oil (around 1 to 2 tablespoons,
+                            depending on your hair length) and warm it up. You can do this
+                            by placing the jar of coconut oil in warm water or by rubbing it
+                            between your palms until it melts.<br />
+
+                            Section your hair into smaller sections to ensure even
+                            application. You can use hair clips or hair ties to separate
+                            your hair.<br />
+
+                            Take a small amount of melted coconut oil and apply it to the
+                            first section of your hair. Start from the roots and work your
+                            way to the ends. Massage the oil into your scalp and hair
+                            strands.<br />
+
+                            Repeat this process for each section of your hair until all of
+                            it is coated with coconut oil. Make sure to focus on the ends,
+                            as they tend to be drier and more prone to damage.<br />
+
+                            Once you've applied the coconut oil, gently comb through your
+                            hair with a wide-toothed comb or your fingers to distribute the
+                            oil evenly.<br />
+
+                            Leave the coconut oil in your hair for at least 30 minutes to a
+                            few hours. For deep conditioning, you can leave it on overnight
+                            by wearing a shower cap to protect your pillow.<br />
+
+                            After the desired time, rinse your hair thoroughly with warm
+                            water and shampoo. You may need to shampoo your hair twice to
+                            ensure all the oil is removed.<br />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--for Coconut oil -->
+
+            <!--for Aloe vera -->
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: blue">
+                                <b> How To Apply</b>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="text-align: center; color: black">
+                            Obtain fresh aloe vera gel: Cut a mature aloe vera leaf from the
+                            plant. Wash it thoroughly and slice it open lengthwise. Scoop
+                            out the gel using a spoon or scrape it off with a knife. Collect
+                            about 2-3 tablespoons of the gel in a bowl. If you don't have
+                            access to fresh aloe vera, you can also use store-bought pure
+                            aloe vera gel, just make sure it doesn't contain any added
+                            chemicals or additives.<br />
+
+                            Prepare the aloe vera gel: You can use the gel as it is or blend
+                            it in a blender to make it smoother. If you're using
+                            store-bought gel, skip this step.<br />
+
+                            Apply to the scalp: Part your hair into sections to expose your
+                            scalp. Take a small amount of aloe vera gel on your fingertips
+                            and apply it directly to your scalp. Gently massage the gel into
+                            your scalp using circular motions. Continue until you have
+                            covered your entire scalp.<br />
+
+                            Apply to the hair: After applying the gel to your scalp, you can
+                            also apply it to the length of your hair. Start from the roots
+                            and work your way down to the ends. Make sure to coat your hair
+                            evenly with the gel.<br />
+
+                            Leave it on: Let the aloe vera gel sit on your scalp and hair
+                            for about 30 minutes to an hour. This will allow the nutrients
+                            to penetrate your scalp and hair strands.<br />
+
+                            Rinse thoroughly: After the recommended time has passed, rinse
+                            your hair thoroughly with lukewarm water. Make sure to remove
+                            all traces of the gel from your scalp and hair.<br />
+
+                            Follow up with shampoo and conditioner: You can wash your hair
+                            with a mild shampoo and conditioner to remove any remaining
+                            residue. Choose products that are suitable for your hair
+                            type.<br />
+
+                            Repeat regularly: For best results, repeat this process 1-2
+                            times a week. Consistent use of aloe vera can help improve the
+                            health and appearance of your hair over time.<br />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--for Aloe vera -->
+
+            <!-- for banner start -->
+            <div class="row mt-5">
+                <img src=".\IMG\132c799e165bf3c471110cc763b2a2b0 (1).jpg" class="img-fluid" alt="..." />
+            </div>
+            <!-- for banner end -->
+
+            <!-- about section start -->
+
+            <div class="row mt-5" id="about">
+                <div id="imgslider" class="col-md-6 col-lg-6" style="display: flex; justify-content: space-around">
+                    <img src=".\IMG\twitter-profile-image-400x400 (1).jpg" class="img-fluid" alt="" />
+                </div>
+
+                <div class="col-md-6 col-lg-6 mt-4 mt-lg-0">
+                    <h1 style="
+                text-decoration: underline;
+                color: rgb(187, 86, 86);
+                text-align: center;
+              ">
+                        <strong><span style="color: black"> About Us</span></strong>
+                    </h1>
+                    <p style="text-align: center">
+                        Welcome to <span style="color: #e47911">Allure Beauty</span>, your
+                        ultimate destination for all things hair care. We are passionate
+                        about helping you achieve healthy, vibrant, and beautiful hair,
+                        and we believe that the key to unlocking your hair's full
+                        potential lies in providing the right knowledge, products, and
+                        support.<br />
+
+                        At <span style="color: #e47911">Allure Beauty</span>, we
+                        understand that hair is not just an accessory; it is an expression
+                        of your unique personality and style. Whether you're looking to
+                        enhance your natural hair, solve specific hair concerns, or
+                        explore new hairstyles, we are here to empower you with the tools
+                        and resources you need to feel confident and inspired.<br />
+
+                        <!-- Our team of experienced hair care experts, stylists, and enthusiasts has carefully curated a
+                    collection of high-quality products that cater to diverse hair types, textures, and needs. We
+                    believe in offering a wide range of options so that you can find the perfect fit for your individual
+                    preferences and requirements. From nourishing shampoos and conditioners to styling tools and
+                    accessories, we have everything you need to maintain healthy, luscious locks.<br> -->
+
+                        At <span style="color: #e47911">Allure Beauty</span>, we value
+                        your satisfaction and strive to deliver exceptional customer
+                        service. Our friendly and knowledgeable support team is always
+                        ready to assist you with any questions, concerns, or product
+                        recommendations. We want you to feel supported and confident in
+                        your hair care<br />
+                        journey. Welcome to
+                        <span style="color: #e47911">Allure Beauty</span> - your trusted
+                        partner in hair care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- about section end -->
+        </div>
+
+        <!-- footer section start -->
+
+        <div id="footer" class="row mt-5" style="background-color: rgb(34, 34, 34); color: white">
+            <!-- CONTACT DETAILS -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>CONTACT DETAILS</strong></h4>
+
+                <div class="location mt-5" style="display: flex">
+                    <img src=".\icons\icons8-location-50.png" style="height: 25px" />
+                    <p style="margin-left: 10px">
+                        156-157, Block 3, BYJCHS, Bahadurabad Karachi, Pakistan
+                    </p>
+                </div>
+
+                <div class="call" style="display: flex">
+                    <img src=".\icons\icons8-call-50 (1).png" style="height: 25px" />
+                    <p style="margin-left: 10px">(021) 111-624-333 (111-ALLURE)</p>
+                </div>
+
+                <div class="time" style="display: flex">
+                    <img src=".\icons\icons8-time-32.png" style="height: 25px" />
+                    <p style="margin-left: 10px">
+                        Customer Support: 7 Days a Week, 9:00am - 10:00pm
+                    </p>
+                </div>
+            </div>
+            <!-- CONTACT DETAILS -->
+
+            <!-- CUSTOMER SERVICES -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>CUSTOMER SERVICES</strong></h4>
+                <p class="mt-3">Contact Us</p>
+                <p>Delivery Info</p>
+                <p>FAQs</p>
+                <p>Allure Beauty</p>
+            </div>
+            <!-- CUSTOMER SERVICES -->
+
+            <!-- INFORMATION -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>INFORMATION</strong></h4>
+                <p class="mt-5">Return & Refund</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <!-- INFORMATION -->
+
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>SUBSCRIBE OUR NEWSLETTER</strong></h4>
+                <p class="mt-5">Get the latest offersand promotions!</p>
+                <!-- for input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Your E-mail"
+                        aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                        Subscribe
+                    </button>
+                </div>
+                <!-- for input end -->
+                <!-- <input type="text" placeholder="Enter Your E-mail" style="padding: 7px 7px; width: 290px;"><button  type="button" class="btn btn-primary" style="padding: 7px 7px;">Subscribe</button> -->
+                <a href="https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.naheed.naheedpk"
+                    target="_blank">
+                    <img width="136px" src="https://media.naheed.pk/imageblock_image/g/e/getapp.png" loading="lazy"
+                        class="mt-2" /></a>
+            </div>
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+        </div>
+
+        <div class="row" style="background-color: rgb(34, 34, 34); color: white; margin-top: 1px">
+            <div class="col-md-6 col-lg-6 mt-5" style="display: flex; justify-content: space-around">
+                <p>Copyright © 2023 Allure beauty.pk. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 col-lg-6 mt-5">
+                <img class="paypal img-fluid" loading="lazy"
+                    src="https://media.naheed.pk/wysiwyg/paymenticons-4-10-2022_v2.png" alt="Payment" />
+            </div>
+        </div>
+
+        <!-- footer section end -->
+    </div>
+    <!-- The website end -->
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

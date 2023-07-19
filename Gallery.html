@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Kanit", sans-serif;
+            
+
+        }
+
+
+        #navbarSupportedContent ul li :hover {
+            background-color: rgb(224, 203, 81);
+            transition: all 0.7s ease;
+            color: black;
+            /* text-decoration: underline; */
+        }
+
+        #navbarSupportedContent ul li {
+            font-size: 14PX;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+
+
+        }
+
+        .content .content-overlay {
+            background: rgba(50, 50, 50, 0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+
+        .content-image {
+            width: 100%;
+        }
+
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .content:hover .content-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        .content-details h3 {
+            color: #fff;
+            font-weight: 40;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            font-size: 07 em;
+        }
+
+
+        /* navbar resp */
+        @media screen and (max-width: 1039px) {
+            #navbarSupportedContent ul li {
+                font-size: 13px;
+            }
+
+        }
+
+        /* navbar resp */
+
+
+
+        /* for signup form  css */
+
+
+
+
+        .container12 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* for login form css */
+
+        .container34 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<body>
+    <!-- The website start from here -->
+
+    <div class="container-fluid">
+
+
+        <!-- start header -->
+        <div class="row " data-aos="zoom-out" data-aos-duration="700">
+            <div class="col-lg-2 mt-3" style="display: flex; justify-content: space-evenly;">
+                <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                    src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+            </div>
+            <div class="col-lg-8 mt-3" style="display: flex; justify-content: space-evenly;">
+                <div class="input-group mb-3">
+                    <input style="border: 1px solid black; border-radius: 40px;" type="text" class="form-control"
+                        placeholder="SEARCH...." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button style="border: 1px solid black; border-radius: 40px; margin-left: 10px;"
+                        class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- header end -->
+
+        <!-- modal for sign up -->
+        <div class="modal fade" id="exampleModa-signup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container12">
+                        <h2>Signup Form</h2>
+                        <form name="signupForm" onsubmit="return validateForm()" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Sign Up">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="chek-box mt-5" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                        margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for sign up end -->
+
+
+        <!-- modal login up -->
+        <div class="modal fade" id="exampleModa-login" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container34">
+                        <h2>Login Form</h2>
+                        <form name="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username1" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password1" name="password" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Login">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="chek-box mt-3" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                        margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for login end -->
+
+
+
+
+        <!-- start nav-bar -->
+
+        <div class="row sticky-top">
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <nav class="navbar navbar-expand-lg navbar navbar navbar-light" style="background-color: #f9fcfd;">
+                    <div class="container-fluid">
+                        <!-- <a class="navbar-brand" href="#">
+                            img icon
+                            <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                                src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+                            img icon end
+                        </a> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item ">
+                                    <a class="nav-link " aria-current="page" href=".\index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href=".\index.html">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\Hair Products\shampoo.html">Shampoo</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\haircream.html">Hair
+                                                cream</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Products\Conditioner.html">Conditioners</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\Hair Mask.html">Masks</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\Hair Serum.html">Serums</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\Spray.html">Hairsprays</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href=".\Hair Products\Hair oils.html">hair
+                                                oils </a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Equipment
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Dryer.html">Hair Dryer</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Straightner.html">Hair
+                                                Straightener/Flat
+                                                Iron</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Spray Bottles.html">Spray
+                                                bottles</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Equipments\Hair Steamers.html">Steamers</a></li>
+                                        <li><a class="dropdown-item"
+                                                href=".\Hair Equipments\Hair Massagers.html">Massagers</a></li>
+                                        <li><a class="dropdown-item" href=".\Hair Equipments\Spa Caps.html">Spa caps</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="..\HTML\Blogs\html\compnywise.html">Top Branded Equipments</a></li>
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=".\Contact us\contact.html">Contact Us</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=".\index.html">Home Remedies</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Treatments
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\Treatment\Treatment-DANDRUFF.html">For
+                                                Dandruff</a></li>
+                                        <li><a class="dropdown-item" href=".\Treatment\treatment-baldness.html">For
+                                                Baldness</a></li>
+                                        <li><a class="dropdown-item" href=".\Treatment\treatment-HAIRFALL.html">For
+                                                Hair-Fall</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item"
+                                                href=".\Blogs\html\equi-compare.html">Comparision</a></li>
+                                        <li><a class="dropdown-item" href=".\Blogs\html\remedy.html">Remedies</a></li>
+                                        <li><a class="dropdown-item" href=".\Blogs\html\blog.html">Latest Info</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gallery</a>
+                                </li>
+
+                            </ul>
+                            <!-- for signup and login -->
+                            <div class="row">
+                                <div class="col-lg-2" id="signup" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-signup"><img
+                                            src=".\icons\add-user.png" alt="" height="25px"></a>
+                                </div>
+
+                                <div class="col-lg-2" id="login" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-login"><img
+                                            src=".\icons\log-in.png" alt="" height="38px"></a>
+                                </div>
+
+                                <div class="col-lg-8" style="display: flex; justify-content: space-around;">
+                                    <a class="sale" href="#" style="text-decoration: none; color: red;">Sale UpTo50%</a>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- end nav-bar -->
+        <div class="container-fluid" style="background-color: rgb(50, 49, 49); padding-bottom: 20px; color: white;">
+            <div class="container">
+                <!-- start of Gallery -->
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Oils</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 01 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <a href="#myGallery" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Oils Canvas\1.png" alt="Lights" style="width: 100%"
+                                    class="img-thumbnail" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Mielle Organics Hair Oil</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <a href="#myGallery" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Oils Canvas\15.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Mielle Organics Hair Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <a href="#myGallery" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Oils Canvas\16.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Mielle Organics Hair Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <a href="#myGallery" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Oils Canvas\23.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Mielle Organics Hair Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal"
+                                aria-label="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair Oils Canvas\1.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Oils Canvas\15.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Oils Canvas\16.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Oils Canvas\23.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery" type="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery" type="button"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+                <!-- End of Row 01 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Masks</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 02 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <a href="#myGallery2" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Masks Canvas\1.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Every Green Anti-Oxidant Hair Mask</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <a href="#myGallery2" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Masks Canvas\9.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Every Green Anti-Oxidant Hair Mask</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <a href="#myGallery2" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Masks Canvas\19.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Every Green Anti-Oxidant Hair Mask</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <a href="#myGallery2" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Masks Canvas\21.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Every Green Anti-Oxidant Hair Mask</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery2" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair Masks Canvas\1.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Masks Canvas\9.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Masks Canvas\19.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Masks Canvas\21.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery2" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery2" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 02 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Conditioners</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 03 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <a href="#myGallery3" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Conditioner Canvas\1.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Semmé Keratin Oil Conditioner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <a href="#myGallery3" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Conditioner Canvas\5.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Semmé Keratin Oil Conditioner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <a href="#myGallery3" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Conditioner Canvas\23.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Semmé Keratin Oil Conditioner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <a href="#myGallery3" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Conditioner Canvas\24.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Semmé Keratin Oil Conditioner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery3" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair Conditioner Canvas\1.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Conditioner Canvas\5.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Conditioner Canvas\23.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Conditioner Canvas\24.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery3" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery3" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 03 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Serums</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 04 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            <a href="#myGallery4" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Serums Canvas\2.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Organic Moroccan Argan Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            <a href="#myGallery4" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Serums Canvas\10.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Organic Moroccan Argan Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            <a href="#myGallery4" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Serums Canvas\14.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Organic Moroccan Argan Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            <a href="#myGallery4" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Serums Canvas\15.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Organic Moroccan Argan Oil</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery4" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair Serums Canvas\2.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Serums Canvas\10.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Serums Canvas\14.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Serums Canvas\15.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery4" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery4" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 04 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Spray</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 05 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            <a href="#myGallery5" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Spray canvas\14.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Super Hold & Styling Hairspray</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            <a href="#myGallery5" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Spray canvas\25.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Super Hold & Styling Hairspray</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            <a href="#myGallery5" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Spray canvas\26.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Super Hold & Styling Hairspray</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            <a href="#myGallery5" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair Spray canvas\27.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Super Hold & Styling Hairspray</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery5" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair Spray canvas\14.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Spray canvas\25.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Spray canvas\26.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair Spray canvas\27.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery5" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery5" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 05 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Dryers</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 06 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            <a href="#myGallery6" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Dryer Canvas\14.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>CONAIR FloMotion Hair Dryer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            <a href="#myGallery6" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Dryer Canvas\15.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>CONAIR FloMotion Hair Dryer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            <a href="#myGallery6" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Dryer Canvas\19.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>CONAIR FloMotion Hair Dryer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            <a href="#myGallery6" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Dryer Canvas\21.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>CONAIR FloMotion Hair Dryer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery6" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Hair Dryer Canvas\14.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Dryer Canvas\15.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Dryer Canvas\19.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Dryer Canvas\21.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery6" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery6" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 06 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Massagers</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 07 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            <a href="#myGallery7" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Massagers Canvas\2.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Scalp Massager & Head Claw</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            <a href="#myGallery7" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Massagers Canvas\4.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Scalp Massager & Head Claw</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            <a href="#myGallery7" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Massagers Canvas\10.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Scalp Massager & Head Claw</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            <a href="#myGallery7" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Massagers Canvas\11.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Scalp Massager & Head Claw</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery7" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Hair Massagers Canvas\2.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Massagers Canvas\4.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Massagers Canvas\10.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Massagers Canvas\11.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery7" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery7" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 07 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Spray Bottles</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 08 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            <a href="#myGallery8" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\1.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Equate Continuous Spray Bottle</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            <a href="#myGallery8" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\13.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Equate Continuous Spray Bottle</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            <a href="#myGallery8" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\14.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Equate Continuous Spray Bottle</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            <a href="#myGallery8" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\21.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Equate Continuous Spray Bottle</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery8" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\1.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\13.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\14.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Spray Bottles canvas\21.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery8" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery8" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 08 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Steamers</h1>
+                    </div>
+                </div>
+
+
+                <!-- Start Row 09 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal9">
+                            <a href="#myGallery9" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Steamers Canvas\3.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Andis Bonnet Hair Steamer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal9">
+                            <a href="#myGallery9" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Steamers Canvas\13.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Andis Bonnet Hair Steamer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal9">
+                            <a href="#myGallery9" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Steamers Canvas\15.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Andis Bonnet Hair Steamer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal9">
+                            <a href="#myGallery9" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Steamers Canvas\16.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Andis Bonnet Hair Steamer</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery9" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Hair Steamers Canvas\3.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Steamers Canvas\13.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Steamers Canvas\15.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Steamers Canvas\16.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery9" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery9" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 09 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Straightners</h1>
+                    </div>
+                </div>
+
+
+                <!-- Start Row 10 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            <a href="#myGallery10" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Straightners Canvas\9.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Conair Ceramic Hair Straightner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            <a href="#myGallery10" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Straightners Canvas\11.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Conair Ceramic Hair Straightner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            <a href="#myGallery10" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Straightners Canvas\13.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Conair Ceramic Hair Straightner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            <a href="#myGallery10" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Hair Straightners Canvas\17.png" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Conair Ceramic Hair Straightner</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery10" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Hair Straightners Canvas\9.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Straightners Canvas\11.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Straightners Canvas\13.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Hair Straightners Canvas\17.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery10" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery10" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 10 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Spa Caps</h1>
+                    </div>
+                </div>
+
+
+                <!-- Start Row 11 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal11">
+                            <a href="#myGallery11" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Spa Caps Canvas\4.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Steamer Thermal Spa Cap</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal11">
+                            <a href="#myGallery11" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Spa Caps Canvas\16.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Steamer Thermal Spa Cap</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal11">
+                            <a href="#myGallery11" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Spa Caps Canvas\12.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Steamer Thermal Spa Cap</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal11">
+                            <a href="#myGallery11" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Equipments\IMG\Spa Caps Canvas\13.png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Steamer Thermal Spa Cap</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery11" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Equipments\IMG\Spa Caps Canvas\4.png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Spa Caps Canvas\16.png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Spa Caps Canvas\12.png" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Equipments\IMG\Spa Caps Canvas\13.png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery11" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery11" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 11 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Hair Creams</h1>
+                    </div>
+                </div>
+
+                <!-- Start Row 12 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            <a href="#myGallery12" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair cream\img1.jpg (13).jpg" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Paul Mitchell Hair Cream</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            <a href="#myGallery12" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair cream\img1.jpg (14).jpg" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Paul Mitchell Hair Cream</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            <a href="#myGallery12" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair cream\img1.jpg (15).jpg" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Paul Mitchell Hair Cream</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            <a href="#myGallery12" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Hair cream\img1.jpg (16).jpg" alt="Lights"
+                                    style="width: 100%" class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Paul Mitchell Hair Cream</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery12" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Hair cream\img1.jpg (13).jpg" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair cream\img1.jpg (14).jpg" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair cream\img1.jpg (15).jpg" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Hair cream\img1.jpg (16).jpg" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery12" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery12" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 12 -->
+
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: 50px">
+                        <h1>Shampoo</h1>
+                    </div>
+                </div>
+
+
+                <!-- Start Row 13 -->
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            <a href="#myGallery13" data-bs-slide-to="0">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Shampoo\img1.jpg (2).png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Moisturizing Shampoo</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            <a href="#myGallery13" data-bs-slide-to="1">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Shampoo\img1.jpg (3).png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Moisturizing Shampoo</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            <a href="#myGallery13" data-bs-slide-to="2">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Shampoo\img1.jpg (3).jpg" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Moisturizing Shampoo</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-duration="800"
+                        style="text-align: center;">
+                        <div class="content" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            <a href="#myGallery13" data-bs-slide-to="3">
+                                <div class="content-overlay"></div>
+                                <img src=".\Hair Products\IMG\Shampoo\img1.jpg (5).png" alt="Lights" style="width: 100%"
+                                    class="content-image" />
+                                <div class="content-details fadeIn-bottom">
+                                    <h3>Hair Moisturizing Shampoo</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--begin modal window-->
+                <div class="modal fade" id="myModal13" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: rgb(45, 45, 45);">
+                            <button type="button" class="btn-close pull-right" data-bs-dismiss="modal" title="Close">
+                                <span class="glyphicon glyphicon-remove"></span></button>
+                            <!-- Start modal body -->
+                            <div class="modal-body">
+
+                                <!--CAROUSEL CODE GOES HERE-->
+
+
+                                <div id="myGallery13" class="carousel slide" data-interval="false"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"> <img
+                                                src=".\Hair Products\IMG\Shampoo\img1.jpg (2).png" alt="item0"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Shampoo\img1.jpg (3).png" alt="item1"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Shampoo\img1.jpg (3).jpg" alt="item2"
+                                                class="d-block w-100"></div>
+                                        <div class="carousel-item"> <img
+                                                src=".\Hair Products\IMG\Shampoo\img1.jpg (5).png" alt="item3"
+                                                class="d-block w-100"></div>
+
+                                        <!--end carousel-inner-->
+                                    </div>
+                                    <!--Begin Previous and Next buttons-->
+                                    <button class="carousel-control-prev" data-bs-target="#myGallery13" role="button"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span></button>
+                                    <button class="carousel-control-next" data-bs-target="#myGallery13" role="button"
+                                        data-bs-target="#myGallery2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span></button>
+
+                                    <!--end carousel-->
+                                </div>
+                                <!--end modal-body-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end Modal Window -->
+
+
+                <!-- End of Row 13 -->
+            </div>
+        </div>
+
+
+
+        <!-- footer section start -->
+
+        <div id="footer" class="row mt-5" style="background-color: rgb(34, 34, 34); color: white">
+            <!-- CONTACT DETAILS -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>CONTACT DETAILS</strong></h4>
+
+                <div class="location mt-5" style="display: flex">
+                    <img src=".\icons\icons8-location-50.png" style="height: 25px" />
+                    <p style="margin-left: 10px">
+                        156-157, Block 3, BYJCHS, Bahadurabad Karachi, Pakistan
+                    </p>
+                </div>
+
+                <div class="call" style="display: flex">
+                    <img src=".\icons\icons8-call-50 (1).png" style="height: 25px" />
+                    <p style="margin-left: 10px">(021) 111-624-333 (111-ALLURE)</p>
+                </div>
+
+                <div class="time" style="display: flex">
+                    <img src=".\icons\icons8-time-32.png" style="height: 25px" />
+                    <p style="margin-left: 10px">
+                        Customer Support: 7 Days a Week, 9:00am - 10:00pm
+                    </p>
+                </div>
+            </div>
+            <!-- CONTACT DETAILS -->
+
+            <!-- CUSTOMER SERVICES -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>CUSTOMER SERVICES</strong></h4>
+                <p class="mt-3">Contact Us</p>
+                <p>Delivery Info</p>
+                <p>FAQs</p>
+                <p>Allure Beauty</p>
+            </div>
+            <!-- CUSTOMER SERVICES -->
+
+            <!-- INFORMATION -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>INFORMATION</strong></h4>
+                <p class="mt-5">Return & Refund</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <!-- INFORMATION -->
+
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>SUBSCRIBE OUR NEWSLETTER</strong></h4>
+                <p class="mt-5">Get the latest offersand promotions!</p>
+                <!-- for input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Your E-mail"
+                        aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                        Subscribe
+                    </button>
+                </div>
+                <!-- for input end -->
+                <!-- <input type="text" placeholder="Enter Your E-mail" style="padding: 7px 7px; width: 290px;"><button  type="button" class="btn btn-primary" style="padding: 7px 7px;">Subscribe</button> -->
+                <a href="https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.naheed.naheedpk"
+                    target="_blank">
+                    <div class="content-overlay"></div>
+                    <img width="136px" src="https://media.naheed.pk/imageblock_image/g/e/getapp.png" loading="lazy"
+                        class="mt-2">
+                </a>
+            </div>
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+        </div>
+
+        <div class="row" style="background-color: rgb(34, 34, 34); color: white; margin-top: 1px">
+            <div class="col-md-6 col-lg-6 mt-5" style="display: flex; justify-content: space-around">
+                <p>Copyright © 2023 Allure beauty.pk. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 col-lg-6 mt-5">
+                <img class="img-fluid paypal" loading="lazy"
+                    src="https://media.naheed.pk/wysiwyg/paymenticons-4-10-2022_v2.png" alt="Payment" />
+            </div>
+        </div>
+
+        <!-- footer section end -->
+
+        <!-- end website -->
+    </div>
+</body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 250,
+    });
+</script>
+
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+    <!-- external css link -->
+    <link rel="stylesheet" href="..\CSS\blog.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- bootstrao 5 jquery and popper links start-->
+    <link rel="stylesheet" href="..\Bootstrap\bootstrap-5.0.2-dist\css\bootstrap.css">
+    <script src="..\Jquery\jQuery.js"></script>
+    <script src="..\popper\popper.js"></script>
+    <script src="..\Bootstrap\bootstrap-5.0.2-dist\js\bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/26af1bd261.js" crossorigin="anonymous"></script>
+    <!-- ---- -->
+    <script src="..\JS\jquery.js"></script>
+    <script src="..\JS\script.js"></script>
+
+    <!-- fontawesome link start-->
+    <link rel="stylesheet" href="..\fonts\css\all.min.css">
+    <link rel="stylesheet" href="..\fonts\css\fontawesome.min.css">
+    <!-- fontawesome link end -->
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Kanit', sans-serif;
+
+        }
+
+        #navbarSupportedContent ul li :hover {
+            background-color: rgb(224, 203, 81);
+            transition: all 0.5s ease;
+            color: black;
+
+        }
+
+        #navbarSupportedContent ul li {
+            font-size: 14PX;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .col-md-4 {
+            overflow: hidden;
+        }
+
+        .col-md-4 img {
+            transition: all 0.7s ease;
+        }
+
+        .col-md-4:hover img {
+            transform: scale(1.2);
+
+        }
+
+        .inner-img {
+            overflow: hidden;
+        }
+
+
+        .inner-img img {
+            transition: all 1s ease;
+        }
+
+        .inner-img:hover img {
+            transform: scale(1.1);
+        }
+
+
+        .card-body h5 {
+            font-size: 15px;
+        }
+
+        .card-body a {
+            font-size: 15px;
+        }
+
+        #display-img :hover {
+            transform: scale(1.03);
+            transition: all 0.5s ease-out;
+        }
+
+        /* navbar resp */
+        @media screen and (max-width: 1039px) {
+            #navbarSupportedContent ul li {
+                font-size: 13px;
+            }
+
+        }
+
+        /* navbar resp */
+
+
+
+        /* for signup form  css */
+
+
+
+
+        .container12 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+        /* for login form css */
+
+
+
+        .container34 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<body>
+    <!-- The website start from here -->
+
+    <div class="container-fluid">
+
+
+        <!-- start header -->
+        <div class="row " data-aos="zoom-out" data-aos-duration="700">
+            <div class="col-lg-2 mt-3" style="display: flex; justify-content: space-evenly;">
+                <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                    src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+            </div>
+            <div class="col-lg-8 mt-3" style="display: flex; justify-content: space-evenly;">
+                <div class="input-group mb-3">
+                    <input style="border: 1px solid black; border-radius: 40px;" type="text" class="form-control"
+                        placeholder="SEARCH...." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button style="border: 1px solid black; border-radius: 40px; margin-left: 10px;"
+                        class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- header end -->
+
+        <!-- modal for sign up -->
+        <div class="modal fade" id="exampleModa-signup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container12">
+                        <h2>Signup Form</h2>
+                        <form name="signupForm" onsubmit="return validateForm()" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Sign Up">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="chek-box mt-5" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                                margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Sign Up</button>
+                            </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for sign up end -->
+
+
+        <!-- modal login up -->
+        <div class="modal fade" id="exampleModa-login" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container34">
+                        <h2>Login Form</h2>
+                        <form name="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username1" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password1" name="password" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Login">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="chek-box mt-3" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                                margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Sign Up</button>
+                            </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for login end -->
+
+
+
+
+        <!-- start nav-bar -->
+
+        <div class="row sticky-top">
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <nav class="navbar navbar-expand-lg navbar navbar navbar-light" style="background-color: #f9fcfd;">
+                    <div class="container-fluid">
+                        <!-- <a class="navbar-brand" href="#">
+                                    img icon
+                                    <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                                        src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+                                    img icon end
+                                </a> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item ">
+                                    <a class="nav-link " aria-current="page" href="..\..\index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\index.html">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\shampoo.html">Shampoo</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\haircream.html">Hair
+                                                cream</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Conditioner.html">Conditioners</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\Hair Mask.html">Masks</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Hair Serum.html">Serums</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Spray.html">Hairsprays</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\Hair oils.html">hair
+                                                oils </a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Equipment
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Dryer.html">Hair
+                                                Dryer</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Straightner.html">Hair
+                                                Straightener/Flat
+                                                Iron</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Spray Bottles.html">Spray bottles</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Hair Steamers.html">Steamers</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Hair Massagers.html">Massagers</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Spa Caps.html">Spa
+                                                caps</a></li>
+                                        <li><a class="dropdown-item" href=".\compnywise.html">Top Branded Equipments</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\Contact us\contact.html">Contact Us</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\index.html">Home Remedies</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Treatments
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Treatment\Treatment-DANDRUFF.html">For
+                                                Dandruff</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Treatment\treatment-baldness.html">For
+                                                Baldness</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Treatment\treatment-HAIRFALL.html">For
+                                                Hair-Fall</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Comparision</a></li>
+                                        <li><a class="dropdown-item" href=".\remedy.html">Remedies</a></li>
+                                        <li><a class="dropdown-item" href=".\blog.html">Latest Info</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\Gallery.html">Gallery</a>
+                                </li>
+
+                            </ul>
+                            <!-- for signup and login -->
+                            <div class="row">
+                                <div class="col-lg-2" id="signup" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-signup"><img
+                                            src=".\icons\add-user.png" alt="" height="25px"></a>
+                                </div>
+
+                                <div class="col-lg-2" id="login" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-login"><img
+                                            src=".\icons\log-in.png" alt="" height="38px"></a>
+                                </div>
+
+                                <div class="col-lg-8" style="display: flex; justify-content: space-around;">
+                                    <a class="sale" href="#" style="text-decoration: none; color: red;">Sale UpTo50%</a>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- end nav-bar -->
+
+
+
+
+
+
+
+
+        <!-- body start -->
+        <div class="row justify-content-center">
+            <div class="col-md-10 mt-3 text-center">
+                <h1>Equipment Comparison</h1>
+                <div class=" mt-3" style="font-size: larger; color: rgb(9, 126, 155);">
+                    <h3><a href="#" style="text-decoration: none;" class="text-reset">Dyson Supersonic vs GHD Helios</a>
+                    </h3>
+                </div></a>
+            </div>
+            <div class="col-md-5">
+                <div class="overflow-scroll mt-4" style="height: 500px;">
+                    <h3>WHAT IS SPECIAL ABOUT THE DYSON SUPERSONIC?</h3>
+                    <img class="img-fluid mt-2  " src="..\img\compar\Dyson.jpg" width="100%" alt="">
+                    <p class=" mt-3 ">Dyson has a knack for creating products that entice us to embrace our desires and
+                        invest significant amounts of money in the pursuit of the best hair straighteners, household
+                        fans, or cordless vacuum cleaners. Their inaugural hair tool, the Supersonic, introduced in
+                        2016, redefined the hair dryer standard with its compact yet powerful design. Harnessing Dyson's
+                        renowned vacuum technology, the Supersonic swiftly styles hair with a concentrated blast of air,
+                        providing users with a delightful and serene blow-drying experience through its intelligent
+                        weight distribution and quiet operation.</p>
+                    <h3>SPECIFICATIONS</h3>
+                    <p>
+                        <b>Weight</b> : 659g <br>
+                        <b>Power</b> : 1600W <br>
+                        <b>Speed settings</b> : 3 <br>
+                        <b>Heat settings</b> : 4 <br>
+                        <b>Cord length</b> : 2.5m <br>
+                        <b>Warranty</b> : 2 years <br>
+                        <b>Available colours</b> : Iron & fuschia, black & nickel <br>
+                        <b>Extras</b> : 5 styling attachments included
+                    </p>
+                    <h3>Technical perfomance</h3>
+                    <p>Despite being quieter than most of its competitors, the dryer lives up to its name with its hit
+                        of power. With a sound more akin to a sci-fi jet than a hair dryer, the Supersonic emits a
+                        high-velocity stream of controlled air to dry locks in seconds. </p>
+                    <h3>User experience</h3>
+                    <p>With nifty features wrapped up in a neat little package, the nimble Supersonic makes for
+                        effortless styling. It's one of the quietest hair dryers we've tried and is relatively
+                        lightweight. This, coupled with a hidden motor in the handle rather than in the barrel like
+                        other dryers, distributes the weight evenly so that your hand can cradle the tool comfortably,
+                        meaning no more achy arms – no matter how thick or difficult your hair is.</p>
+                    <h3>Results</h3>
+                    <p>The Supersonic’s easy handling and jet-like motor mean that hair is smoothed down but with a
+                        gorgeous natural bounce. The dryer’s use of negative ions also eliminates frizz more than we’ve
+                        seen in any other dryer. Hair was left soft to touch and shiny to look at – what more could we
+                        ask for?"</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="overflow-scroll mt-4" style="height: 500px;">
+                    <h3>WHAT IS SPECIAL ABOUT THE GHD HELIOS?</h3>
+                    <img class="img-fluid mt-2  " src="..\img\compar\GHD Helios.jpg" width="100%" alt="">
+                    <p class=" mt-3 ">Dyson has a knack for creating products that entice us to embrace our desires and
+                        invest significant amounts of money in the pursuit of the best hair straighteners, household
+                        fans, or cordless vacuum cleaners. Their inaugural hair tool, the Supersonic, introduced in
+                        2016, redefined the hair dryer standard with its compact yet powerful design. Harnessing Dyson's
+                        renowned vacuum technology, the Supersonic swiftly styles hair with a concentrated blast of air,
+                        providing users with a delightful and serene blow-drying experience through its intelligent
+                        weight distribution and quiet operation.</p>
+                    <h3>SPECIFICATIONS</h3>
+                    <p>
+                        <b>Weight</b> : 659g <br>
+                        <b>Power</b> : 1600W <br>
+                        <b>Speed settings</b> : 3 <br>
+                        <b>Heat settings</b> : 4 <br>
+                        <b>Cord length</b> : 2.5m <br>
+                        <b>Warranty</b> : 2 years <br>
+                        <b>Available colours</b> : Iron & fuschia, black & nickel <br>
+                        <b>Extras</b> : 5 styling attachments included
+                    </p>
+                    <h3>Technical perfomance</h3>
+                    <p>Despite being quieter than most of its competitors, the dryer lives up to its name with its hit
+                        of power. With a sound more akin to a sci-fi jet than a hair dryer, the Supersonic emits a
+                        high-velocity stream of controlled air to dry locks in seconds. </p>
+                    <h3>User experience</h3>
+                    <p>With nifty features wrapped up in a neat little package, the nimble Supersonic makes for
+                        effortless styling. It's one of the quietest hair dryers we've tried and is relatively
+                        lightweight. This, coupled with a hidden motor in the handle rather than in the barrel like
+                        other dryers, distributes the weight evenly so that your hand can cradle the tool comfortably,
+                        meaning no more achy arms – no matter how thick or difficult your hair is.</p>
+                    <h3>Results</h3>
+                    <p>The Supersonic’s easy handling and jet-like motor mean that hair is smoothed down but with a
+                        gorgeous natural bounce. The dryer’s use of negative ions also eliminates frizz more than we’ve
+                        seen in any other dryer. Hair was left soft to touch and shiny to look at – what more could we
+                        ask for?"</p>
+                </div>
+            </div>
+            <div class="col-md-10 mt-5 mb-5">
+                <h1>Latest Comparisons!</h1>
+            </div>
+
+            <div class="col-md-3">
+                <div>
+                    <a href="#"><img src="..\img\compar\1.PNG" class="img-fluid" width="100%">
+                        <div class=" mt-3" style="font-size: larger; color: rgb(9, 126, 155);">
+                            <h3><a href="#" style="text-decoration: none;" class="text-reset">Supersonic vs GHD dawlance
+                                    hair dryer</a></h3>
+                        </div>
+                    </a>
+                    <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <a href="#"><img src="..\img\compar\4.png" class="img-fluid" width="100%">
+                        <div class=" mt-3" style="font-size: larger; color: rgb(9, 126, 155);">
+                            <h3><a href="#" style="text-decoration: none;" class="text-reset">Dyson Supersonic vs GHD
+                                    Helios</a></h3>
+                        </div>
+                    </a>
+                    <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <a href="#"><img src="..\img\compar\5.PNG" class="img-fluid" width="100%">
+                        <div class=" mt-3" style="font-size: larger; color: rgb(9, 126, 155);">
+                            <h3><a href="#" style="text-decoration: none;" class="text-reset">Dyson vs panasonic hair
+                                    deyer</a></h3>
+                        </div>
+                    </a>
+                    <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- body end -->
+
+
+
+
+
+
+        <!-- footer section start -->
+        <div class="row mt-5" id="footer" style="background-color: rgb(34, 34, 34); color: white;">
+            <!-- CONTACT DETAILS -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>CONTACT DETAILS</strong></h4>
+
+                <div class="location mt-5" style="display: flex;">
+                    <img src=".\icons\icons8-location-50.png" style="height: 25px;">
+                    <p style="margin-left: 10px;">156-157, Block 3, BYJCHS, Bahadurabad
+                        Karachi, Pakistan</p>
+                </div>
+
+                <div class="call" style="display: flex;">
+                    <img src=".\icons\icons8-call-50 (1).png" style="height: 25px;">
+                    <p style="margin-left: 10px;">(021) 111-624-333
+                        (111-ALLURE)</p>
+                </div>
+
+                <div class="time" style="display: flex;">
+                    <img src=".\icons\icons8-time-32.png" style="height: 25px;">
+                    <p style="margin-left: 10px;">Customer Support: 7 Days a Week,
+                        9:00am - 10:00pm</p>
+                </div>
+
+            </div>
+            <!-- CONTACT DETAILS -->
+
+            <!-- CUSTOMER SERVICES -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>CUSTOMER SERVICES</strong></h4>
+                <p class="mt-3">Contact Us</p>
+                <p>Delivery Info</p>
+                <p>FAQs</p>
+                <p>Allure Beauty</p>
+            </div>
+            <!-- CUSTOMER SERVICES -->
+
+            <!-- INFORMATION -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>INFORMATION</strong></h4>
+                <p class="mt-5">Return & Refund</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <!-- INFORMATION -->
+
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>SUBSCRIBE OUR NEWSLETTER</strong></h4>
+                <p class="mt-5">Get the latest offersand promotions!</p>
+                <!-- for input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Your E-mail"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                </div>
+                <!-- for input end -->
+                <!-- <input type="text" placeholder="Enter Your E-mail" style="padding: 7px 7px; width: 290px;"><button  type="button" class="btn btn-primary" style="padding: 7px 7px;">Subscribe</button> -->
+                <a href="https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.naheed.naheedpk"
+                    target="_blank"> <img width="136px" src="https://media.naheed.pk/imageblock_image/g/e/getapp.png"
+                        loading="lazy" class="img-fluid mt-2"></a>
+
+            </div>
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+        </div>
+        <div class="row" style="background-color: rgb(34, 34, 34); color: white; margin-top: 1px;">
+            <div class="col-md-6 order-2 order-md-1 mt-5" style="display: flex; justify-content: space-around;">
+                <p>Copyright © 2023 Allure beauty.pk. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 order-1 order-md-2  mt-5">
+                <img class="img-responsive paypal img-fluid" loading="lazy"
+                    src="https://media.naheed.pk/wysiwyg/paymenticons-4-10-2022_v2.png" alt="Payment">
+            </div>
+        </div>
+        <!-- footer section end -->
+
+    </div>
+
+
+
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

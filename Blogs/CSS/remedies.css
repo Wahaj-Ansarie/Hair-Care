@@ -1,0 +1,95 @@
+.bc{
+    color: orangered; 
+}
+.bc:hover{
+    color: gold;
+}
+#medic{
+    font-size: 18px;
+}
+.hovy:hover{
+    background-color: rgb(250, 250, 250);
+    border-color: rgb(250, 250, 250);
+}
+#line{
+    margin-top: -16px;
+}
+.ho{
+  position: relative;
+  bottom: 0px;
+  transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease-in-out; 
+    transition-delay: 0s; 
+}
+
+.ho:hover{
+    position: relative;
+    bottom: 6px;
+    box-shadow: 0 0 10px 2px rgba(168, 185, 190, 0.5); 
+    
+}
+
+/* form start */
+    
+    .input-container {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .icon, .fa-link, .fa-pen-to-square {
+      padding: 10px;
+      background: orangered;
+      font-size: 25px;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+    
+    .input-field:focus {
+      border: 2px solid orangered;
+    }
+    
+    /* Set a style for the submit button */
+    .btn-formy {
+      background-color: orangered;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 36px;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .btn-formy:hover {
+      opacity: 1;
+    }
+
+/* form-end */
+.comntt{
+    background-color:orangered;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 19px;
+    border-radius: 8px;
+}
+.font-f{
+  font-size: 40px; 
+  color:rgba(58, 137, 228, 0.822)
+}
+.font-t{
+  font-size: 40px;
+  color: rgb(0, 217, 255) ;
+}

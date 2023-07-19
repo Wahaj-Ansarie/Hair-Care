@@ -1,0 +1,51 @@
+.opt:hover{
+    color: orange;
+}
+.card :hover{
+    border-color: rgb(187, 37, 37);
+}
+/* img transition */
+.col-md-4:hover img {
+    transform: scale(1.2);
+
+}
+
+.inner-img {
+    overflow: hidden;
+}
+
+
+.inner-img img {
+    transition: all 1s ease;
+}
+
+.inner-img:hover img {
+    transform: scale(1.1);
+} 
+/* img-transition end */
+
+
+.collapsible {
+  
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+    background-color: #f1f1f1;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  
+}
+.activated{
+    color: orange;
+}

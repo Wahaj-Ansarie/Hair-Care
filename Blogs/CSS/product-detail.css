@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Kanit', sans-serif;
+
+}
+ 
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ 
+
+    #ver-1{width: 250px;
+    margin-top: 30px;}    
+
+}
+
+@media only screen and (min-width: 1px) and (max-width: 570px){ 
+    .fb{margin-right: 17px;} 
+     .tw{margin-right: 17px;} 
+} 
+
+
+.sty-a{
+    text-decoration: none; 
+     
+}
+.namee{
+    color: orangered;
+}
+.comp{
+    font-size: 14px;
+}
+.comp:hover{
+    color: rgb(255, 174, 0);
+    
+}
+.font-f{
+    font-size: 35px; 
+    color:rgba(58, 137, 228, 0.822)
+}
+.font-t{
+    font-size: 35px;
+    color: rgb(0, 217, 255) ;
+}
+.font-h{
+    font-size: 35px;  
+    color: orangered;
+}
+#revdes{
+    margin-top: 20px;
+}
+#descrip{
+    width: 90%;
+    
+    margin: auto;
+    display: none;
+    margin-bottom: 30px;
+}
+
+#revie, #paym{
+    width: 90%;
+    
+    margin: auto;
+    
+    margin-bottom: 30px;
+}
+#paym{
+    display: none;
+}
+
+.rev-p{
+    font-size: 15.5px;
+    font-weight: bolder;
+}
+.gap{
+    position: relative;
+    bottom: 19px;
+}
+.your{
+    font-size: 14px;
+    font-weight: bolder;
+    color: gray;
+}
+.yours{
+    font-size: 14px;
+    
+    color: gray;
+}
+/* rating */
+.rating {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .star {
+    color: gray;
+  }
+  
+  .star:hover,
+  .star.active {
+    color:orangered;
+  }
+  .pos{
+    position: relative;
+    top: 2px;
+  }
+  /* rating */
+  #paybut{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    font-weight: bolder;
+    background-color: navy;
+    border: none;
+  }
+  .fa-location-dot, .fa-phone, .fa-clock{
+    font-size: 20px;
+  }

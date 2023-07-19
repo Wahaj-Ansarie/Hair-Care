@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <!-- external css link -->
+    <link rel="stylesheet" href="..\CSS\remedies.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- bootstrao 5 jquery and popper links start-->
+    <link rel="stylesheet" href="..\Bootstrap\bootstrap-5.0.2-dist\css\bootstrap.css">
+    <script src="..\Jquery\jQuery.js"></script>
+    <script src="..\popper\popper.js"></script>
+    <script src="..\Bootstrap\bootstrap-5.0.2-dist\js\bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/26af1bd261.js" crossorigin="anonymous"></script>
+    <!-- ---- -->
+    <script src="..\JS\jquery.js"></script>
+    <script src="..\JS\script.js"></script>
+
+    <!-- fontawesome link start-->
+    <link rel="stylesheet" href="..\fonts\css\all.min.css">
+    <link rel="stylesheet" href="..\fonts\css\fontawesome.min.css">
+    <!-- fontawesome link end -->
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Kanit', sans-serif;
+
+        }
+
+        #navbarSupportedContent ul li :hover {
+            background-color: rgb(224, 203, 81);
+            transition: all 0.5s ease;
+            color: black;
+
+        }
+
+        #navbarSupportedContent ul li {
+            font-size: 14PX;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .col-md-4 {
+            overflow: hidden;
+        }
+
+        .col-md-4 img {
+            transition: all 0.7s ease;
+        }
+
+        .col-md-4:hover img {
+            transform: scale(1.2);
+
+        }
+
+        .inner-img {
+            overflow: hidden;
+        }
+
+
+        .inner-img img {
+            transition: all 1s ease;
+        }
+
+        .inner-img:hover img {
+            transform: scale(1.1);
+        }
+
+
+        .card-body h5 {
+            font-size: 15px;
+        }
+
+        .card-body a {
+            font-size: 15px;
+        }
+
+        #display-img :hover {
+            transform: scale(1.03);
+            transition: all 0.5s ease-out;
+        }
+
+        /* navbar resp */
+        @media screen and (max-width: 1039px) {
+            #navbarSupportedContent ul li {
+                font-size: 13px;
+            }
+
+        }
+
+        /* navbar resp */
+
+
+
+        /* for signup form  css */
+
+
+
+
+        .container12 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+        /* for login form css */
+
+
+
+        .container34 {
+            /* max-width: 400px; */
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<body>
+    <!-- The website start from here -->
+
+    <div class="container-fluid">
+
+
+        <!-- start header -->
+        <div class="row " data-aos="zoom-out" data-aos-duration="700">
+            <div class="col-lg-2 mt-3" style="display: flex; justify-content: space-evenly;">
+                <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                    src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+            </div>
+            <div class="col-lg-8 mt-3" style="display: flex; justify-content: space-evenly;">
+                <div class="input-group mb-3">
+                    <input style="border: 1px solid black; border-radius: 40px;" type="text" class="form-control"
+                        placeholder="SEARCH...." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button style="border: 1px solid black; border-radius: 40px; margin-left: 10px;"
+                        class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- header end -->
+
+        <!-- modal for sign up -->
+        <div class="modal fade" id="exampleModa-signup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container12">
+                        <h2>Signup Form</h2>
+                        <form name="signupForm" onsubmit="return validateForm()" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Sign Up">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="chek-box mt-5" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                        margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for sign up end -->
+
+
+        <!-- modal login up -->
+        <div class="modal fade" id="exampleModa-login" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container34">
+                        <h2>Login Form</h2>
+                        <form name="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username1" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password1" name="password" required>
+                            </div>
+                            <div id="errorContainer"></div>
+                            <div class="form-group">
+                                <input type="submit" class="submit-btn" value="Login">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="chek-box mt-3" style="display: flex; flex-direction: row; justify-content: center;">
+                        <input style="margin-top: -14px;
+                        margin-right: 15px;" type="checkbox">
+                        <p style="color: rgb(98, 98, 241);">I accept the Term & Use & privacy policy </p>
+                    </div>
+
+                    <!-- <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div> -->
+
+                    <div class="parh">
+                        <p style="text-align: center; font-size: 14px;">ALREADY HAVE AN ACCOUNT?<a href="">Log In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal for login end -->
+
+
+
+
+        <!-- start nav-bar -->
+
+        <div class="row sticky-top">
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <nav class="navbar navbar-expand-lg navbar navbar navbar-light" style="background-color: #f9fcfd;">
+                    <div class="container-fluid">
+                        <!-- <a class="navbar-brand" href="#">
+                            img icon
+                            <img style="display: block ;margin: auto;background-color: white;transition: background-color 300ms; height: 35px;"
+                                src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/AllureBeauty_67bd875b-4502-4376-a878-64afd28c6fcf_100x.png?v=1664948042">
+                            img icon end
+                        </a> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item ">
+                                    <a class="nav-link " aria-current="page" href="..\..\index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\index.html">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\shampoo.html">Shampoo</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\haircream.html">Hair
+                                                cream</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Conditioner.html">Conditioners</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\Hair Mask.html">Masks</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Hair Serum.html">Serums</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Products\Spray.html">Hairsprays</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Products\Hair oils.html">hair
+                                                oils </a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Equipment
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Dryer.html">Hair
+                                                Dryer</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Straightner.html">Hair
+                                                Straightener/Flat
+                                                Iron</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Spray Bottles.html">Spray bottles</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Hair Steamers.html">Steamers</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="..\..\Hair Equipments\Hair Massagers.html">Massagers</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Hair Equipments\Spa Caps.html">Spa
+                                                caps</a></li>
+                                        <li><a class="dropdown-item" href=".\compnywise.html">Top Branded Equipments</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\Contact us\contact.html">Contact Us</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\index.html">Home Remedies</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Treatments
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="..\..\Treatment\Treatment-DANDRUFF.html">For
+                                                Dandruff</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Treatment\treatment-baldness.html">For
+                                                Baldness</a></li>
+                                        <li><a class="dropdown-item" href="..\..\Treatment\treatment-HAIRFALL.html">For
+                                                Hair-Fall</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href=".\equi-compare.html">Comparision</a></li>
+                                        <li><a class="dropdown-item" href=".\remedy.html">Remedies</a></li>
+                                        <li><a class="dropdown-item" href=".\blog.html">Latest Info</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="..\..\Gallery.html">Gallery</a>
+                                </li>
+
+                            </ul>
+                            <!-- for signup and login -->
+                            <div class="row">
+                                <div class="col-lg-2" id="signup" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-signup"><img
+                                            src=".\icons\add-user.png" alt="" height="25px"></a>
+                                </div>
+
+                                <div class="col-lg-2" id="login" style="display: flex; justify-content: space-around;">
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModa-login"><img
+                                            src=".\icons\log-in.png" alt="" height="38px"></a>
+                                </div>
+
+                                <div class="col-lg-8" style="display: flex; justify-content: space-around;">
+                                    <a class="sale" href="#" style="text-decoration: none; color: red;">Sale UpTo50%</a>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- end nav-bar -->
+
+
+
+
+
+
+
+
+        <!-- body start -->
+        <div class="row justify-content-center">
+            <!-- article start -->
+            <div class="col-md-7">
+                <div class="row mt-4">
+
+
+                    <div class="col-md-12">
+
+                        <h1>Latest news of DeveLopment in hair dryers</h1>
+                        <i class="fa-solid fa-check"
+                            style="font-size: 18px; color: orangered; position: relative; top: 1px; font-weight: bold;"></i>
+                        <span id="medic">Medically reviewed by <a href="#tric" class="text-decoration-none"> <span
+                                    style="color: orangered; font-weight: bold;">Dr. Kate Evans</span></a> </span><br>
+                        <i class="fa-regular fa-clock"
+                            style="font-size: 18px; color: orangered; position: relative; top: 1px; font-weight: bold;"></i>
+                        <span>Last updated: Apr 24, 2023 </span> <br><br>
+                        <button id="facebookShareButton" style="border: none; background-color: transparent;"><i
+                                class="fa-brands fa-square-facebook font-f"></i></button>
+                        <button id="twitterShareButton" style="border: none; background-color: transparent;"><i
+                                class="fa-brands fa-square-twitter font-t"></i></button>
+
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <p>Everyone has a dream to have smooth, shiny hair. Unfortunately, with the increasing level of
+                            pollution, it becomes hard to manage healthy hair. </p>
+                        <p>If you run your fingers through your hair, you may feel the dry and frizzy hair that makes
+                            you nervous. Also, this lusterless hair may cause various problems such as hair fall.
+                            However, dry hair is not only due to pollution but also due to other reasons such as genetic
+                            or recurrent chemical use.
+                        </p>
+                        <img src="..\img\remedies\1.jpg" class="img-fluid" width="100%">
+                    </div>
+                    <div class="col-md-12 mt-3 hovy g-0 " style="border: 2px solid transparent">
+                        <div class="row align-items-center text-center">
+
+                            <img class="img-fluid col-md-2 col-4 order-2 order-md-1"
+                                src="..\img\product-details\1.webp">
+
+                            <div class="col-md-5 text-md-start col-12 order-1 order-md-2"
+                                style="font-size: larger; color: rgb(9, 126, 155);">
+                                <a href="#" style="text-decoration: none;" class="text-reset">The Man Company Onion Hair
+                                    Oil With 10 Essential Oils For Hair Growth & Hair Fall Control - 100 Ml</a>
+                            </div>
+
+                            <div class="col-md-3 col-4 order-3 order-md-3">
+                                <p style="line-height: 18px;">
+                                    <span style="font-weight: bold; font-size: larger;">Rs. 391
+                                    </span><br><del class="text-muted" style="font-size: large;">Rs. 399</del><br>
+                                    <span style="font-size: smaller; color: rgb(6, 202, 6);">in stock</span>
+                                </p>
+                            </div>
+
+                            <div class="col-md-2 col-4 order-4 order-md-4">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12  hovy g-0 " id="line" style="border: 2px solid transparent">
+                        <div class="row align-items-center text-center">
+                            <img class="img-fluid col-md-2 col-4 order-2 order-md-1"
+                                src="..\img\product-details\2.webp">
+
+                            <div class="col-md-5 text-md-start col-12 order-1 order-md-2"
+                                style="font-size: larger; color: rgb(9, 126, 155);">
+                                <a href="#" style="text-decoration: none;" class="text-reset">Siddhayu Diabo Yogue (By
+                                    Baidyanath) Diabetic Care | Diabetes Control | Blood Sugar Control| 60 Tab</a>
+                            </div>
+                            <div class="col-md-3 col-4 order-3 order-md-3">
+                                <p style="line-height: 18px;">
+                                    <span style="font-weight: bold; font-size: larger;">Rs. 239
+                                    </span><br><del class="text-muted" style="font-size: large;">Rs. 295</del><br>
+                                    <span style="font-size: smaller; color: rgb(6, 202, 6);">in stock</span>
+                                </p>
+                            </div>
+                            <div class="col-md-2 col-4 order-4 order-md-4"><button class="btn btn-primary">Buy
+                                    Now</button></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3 ">
+                        <h3>Causes of dry hair</h3>
+                        <p>Dryness can be due to several factors. It is essential to know your hair first before using
+                            any oil or shampoo. The texture of the hair differs individually. Here are some causes of
+                            dry hair-</p>
+                        <ul>
+                            <li>Genetic </li>
+                            <li>Nutritional deficiencies </li>
+                            <li>Excessive sun exposure</li>
+                            <li>Excessive hair wash</li>
+                            <li>Pollution</li>
+                            <li>Recurrent use of hair chemicals or harsh shampoos</li>
+                            <li>Use of styling products and tools</li>
+                        </ul>
+                        <h3>Home remedies for dry hair </h3>
+                        <p>When you face any hair problem first, you need to start looking for home remedies from your
+                            kitchen. There is a lot of hair-friendly product that is available in our kitchen. Using
+                            ingredients from your pantry is not only convenient, but it also gives you the same, if not
+                            better, results as high-end hair treatments with none of the chemicals. Here are some best
+                            home remedies for dry hair-</p>
+                        <p> <span style="font-weight: bold;">1: Regular oiling with hot oil</span> <br>
+                            Hot hair oil massage is one of the essential treatments for dry hair. Various oils are
+                            useful to treat dry hair effectively, such as coconut oil, almond oil, jojoba oil, and olive
+                            oil. All these oils are rich in vitamin E and antioxidants that <a href="#"
+                                style="text-decoration: none; color: orangered;">help lock the moisture in your hair</a>
+                            . You can combine all these oils to make an effective homemade oil.
+                        </p>
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Mix all oils and warm it but do not boil. </li>
+                            <li>Gently massage this oil on the scalp and hair. </li>
+                            <li>Cover the hair with a warm towel.</li>
+                            <li>Leave for 30âˆ’45 minutes or overnight.</li>
+                            <li>After this time, shampoo and rinse the hair.</li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">2: Hair massage with butter </span> <br>
+                            If you have dry and brittle hair, then apply a small amount of butter to get a natural
+                            shine.
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 mt-3 hovy g-0 " style="border: 2px solid transparent">
+                        <div class="row align-items-center text-center">
+
+                            <img class="img-fluid col-md-2 col-4 order-2 order-md-1"
+                                src="..\img\product-details\1.webp">
+
+                            <div class="col-md-5 text-md-start col-12 order-1 order-md-2"
+                                style="font-size: larger; color: rgb(9, 126, 155);">
+                                <a href="#" style="text-decoration: none;" class="text-reset">The Man Company Onion Hair
+                                    Oil With 10 Essential Oils For Hair Growth & Hair Fall Control - 100 Ml</a>
+                            </div>
+
+                            <div class="col-md-3 col-4 order-3 order-md-3">
+                                <p style="line-height: 18px;">
+                                    <span style="font-weight: bold; font-size: larger;">Rs. 391
+                                    </span><br><del class="text-muted" style="font-size: large;">Rs. 399</del><br>
+                                    <span style="font-size: smaller; color: rgb(6, 202, 6);">in stock</span>
+                                </p>
+                            </div>
+
+                            <div class="col-md-2 col-4 order-4 order-md-4">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12  hovy g-0 " id="line" style="border: 2px solid transparent">
+                        <div class="row align-items-center text-center">
+                            <img class="img-fluid col-md-2 col-4 order-2 order-md-1"
+                                src="..\img\product-details\2.webp">
+
+                            <div class="col-md-5 text-md-start col-12 order-1 order-md-2"
+                                style="font-size: larger; color: rgb(9, 126, 155);">
+                                <a href="#" style="text-decoration: none;" class="text-reset">Siddhayu Diabo Yogue (By
+                                    Baidyanath) Diabetic Care | Diabetes Control | Blood Sugar Control| 60 Tab</a>
+                            </div>
+                            <div class="col-md-3 col-4 order-3 order-md-3">
+                                <p style="line-height: 18px;">
+                                    <span style="font-weight: bold; font-size: larger;">Rs. 239
+                                    </span><br><del class="text-muted" style="font-size: large;">Rs. 295</del><br>
+                                    <span style="font-size: smaller; color: rgb(6, 202, 6);">in stock</span>
+                                </p>
+                            </div>
+                            <div class="col-md-2 col-4 order-4 order-md-4"><button class="btn btn-primary">Buy
+                                    Now</button></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Massage the butter on the hair.</li>
+                            <li>Cover your hair with a shower cap for about a half-hour. </li>
+                            <li>Wash your hair with shampoo. Make sure to rinse all the butter out.</li>
+                        </ul>
+                        <p> <span style="font-weight: bold;">3: Egg yolk and water pack </span> <br>
+                            The egg is the best remedy for every hair problem. Egg yolk is an <a href="#"
+                                style="text-decoration: none; color: orangered;">excellent remedy for dry hair</a> that
+                            conditions your hair shafts and keeps them moisturized.
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Separate the egg yolk from the egg white.
+                            </li>
+                            <li>Then add 3 tablespoons of water in it and mix well.
+                            </li>
+                            <li>Apply all over your hair and wait for 30 minutes before washing with cold water.</li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">4: Egg yolk and honey mask </span> <br>
+                            Eggs are rich in proteins, sulfur, biotin, and honey is rich in antioxidants. Both
+                            ingredients help restore the moisture to avoid further damage.
+
+
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Separate the egg yolk from the egg white.
+                            </li>
+                            <li>Add a tablespoon of honey and few drops of essential oil to combat the egg smell.
+                            </li>
+                            <li>Wisk the mixture and apply it to your hair and scalp. </li>
+                            <li>Let it soak for 20-30 minutes.
+                            </li>
+                            <li>Wash the pack with shampoo and cold water. </li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">5: Yogurt and honey mask </span> <br>
+                            This combination is excellent for dry hair. Yoghurt is rich in proteins that build hair, has
+                            lactic acid that cleanses the scalp. The honey helps to seal the moisture and <a href="#"
+                                style="text-decoration: none; color: orangered;">prevent damage.</a>
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Combine yoghurt and honey nicely. </li>
+                            <li>Apply the mask onto your scalp and hair.</li>
+                            <li>Leave it for 15 -20 minutes.</li>
+                            <li>Rinse your hair with cold water and shampoo.</li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">6: Rice milk and honey hair wash </span> <br>
+                            This combination is excellent for dry hair. Yoghurt is rich in proteins that build hair, has
+                            lactic acid that cleanses the scalp. The honey helps to seal the moisture and prevent
+                            damage.
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Take one cup of rice milk and add 2 tablespoons of honey in it.</li>
+                            <li>Mix the ingredients until it is consistent.</li>
+                            <li>Apply this mixture over your hair and allow it to sit for 10-15 minutes.</li>
+                            <li>Wash it off with shampoo. </li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">7: Avocado and banana pack </span> <br>
+                            It is the most trending hair pack now. Avocado is rich in proteins, amino acids, and
+                            vitamins to soothe the scalp and <a href="#"
+                                style="text-decoration: none; color: orangered;">promote healthy hair growth</a> . It
+                            contains natural oils that moisturize your hair. Banana contains folic acid and potassium
+                            that nourishes the hair.
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Blend avocado and peeled banana in a fine paste.</li>
+                            <li>Add some drops of olive oil and blend it again.</li>
+                            <li>Apply this mask to your hair and cover it with a shower cap.</li>
+                            <li>Leave it for 20-30 minutes and rinse it off. </li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">8: Aloe Vera mask </span> <br>
+                            Aloe Vera is the best option for your hair and skin. It is a good source of vitamins and
+                            minerals. Aloe Vera helps to repair damaged hair and nourish them with proper nutrients.
+                        </p>
+
+                        <p style="font-weight: bold;">How to use</p>
+                        <ul>
+                            <li>Take a bowl, combine 3 tablespoons of yoghurt, 4 tablespoons of aloe vera pulp, and 2
+                                tablespoons of almond oil. </li>
+                            <li>Mix them well and apply them to your scalp and hair shafts.</li>
+                            <li>Leave the pack in for half an hour, and then rinse it out with lukewarm water and
+                                shampoo. </li>
+                        </ul>
+
+                        <p> <span style="font-weight: bold;">9. Egg and Mayonnaise pack </span> <br><br>
+                            Both eggs and mayonnaise are loaded with protein, which helps to fortify and strengthen the
+                            hair and restore moisture to brittle or very dry hair. <br><br>
+                            People can prepare any one of these protein-based mixtures at home in the following ways:
+                        </p>
+
+                        <p style="font-weight: bold;">First Pack</p>
+                        <ol>
+                            <li>Whip an egg white with 2 tablespoons of water.</li><br>
+                            <li>Apply the mixture to the hair and scalp.</li><br>
+                            <li>Massage with the fingertips in circular movements for a few minutes. </li><br>
+                            <li>Rinse the hair with cool water and then shampoo.</li><br>
+                        </ol>
+                        <p style="font-weight: bold;">Second Pack</p>
+                        <ol>
+                            <li>Mix three eggs in a bowl</li><br>
+                            <li>Add 2 tablespoons of olive oil and 1 tablespoon of honey.</li><br>
+                            <li>Apply the mixture to hair and scalp. </li><br>
+                            <li>Cover the head with a plastic covering or shower cap for about 30 minutes.</li><br>
+                            <li> Rinse the hair with cool water and shampoo. </li>
+                        </ol>
+
+                        <p style="font-weight: bold;">Third Pack</p>
+                        <ol>
+                            <li>Wet the hair with warm water and gently apply to it a thick layer of mayonnaise.</li>
+                            <br>
+                            <li>Gently massage the hair and scalp, working it through the hair strands to the ends.</li>
+                            <br>
+                            <li>Cover the head with a plastic cap for 30 minutes to 1 hour</li><br>
+                            <li>Rinse the hair with cool water and shampoo.</li><br>
+
+                        </ol>
+                        <p style="font-weight: bold;">How to prevent dry hair</p>
+                        <ul>
+                            <li>Avoid overuse of hair styling products. </li>
+                            <li>Avoid excessive sun exposure.</li>
+                            <li>Apply a weekly moisturizing hair mask.</li>
+                            <li>Avoid washing hair too often. Limit to once or twice a week.</li>
+                            <li>Use mild, herbal and sulphate-free shampoos.</li>
+
+                        </ul>
+                        <p>There are numerous types of packs and ingredients that are available in your kitchen. But
+                            always remember to use the products that require for your hair. </p>
+                        <p>Read more about: <a href="#" style="text-decoration: none; color: orangered;">How Can Onion
+                                Juice Improve Your Hair?</a> </p>
+
+                        <i>
+                            <p> <span style="font-weight: bold; font-size: small;">Disclaimer: </span>
+                                <span style="color: rgb(8, 153, 146);"> The information included at this site is for
+                                    educational purposes only and is not intended to be a substitute for medical
+                                    treatment by a health care professional. Because of unique individual needs, the
+                                    reader should consult their physician to determine the appropriateness of the
+                                    information for the reader’s situation </span>
+                            </p>
+                        </i>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="row justify-content-center mt-5 mb-5">
+
+                    <div class="col-md-6">
+                        <h2>Was This Post Helpful?</h2>
+                    </div>
+                    <div class="col-md-6 ">
+
+                        <button class="ms-sm-3 btn btn-primary"
+                            style="border: 1px solid rgba(189, 182, 182, 0.377);  border-radius: 32px;">
+                            <i style="font-size: 20px;" class="fa-solid fa-thumbs-up"></i> &nbsp; <span
+                                style=" font-size: 20px;">No</span>
+                        </button>
+
+                        <button class="ms-sm-3 btn  btn-primary "
+                            style="border: 1px solid rgba(189, 182, 182, 0.377);  border-radius: 32px; ">
+                            <i style="font-size: 20px;" class="fa-solid fa-thumbs-down"></i> &nbsp; <span
+                                style=" font-size: 20px;">No</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>This might be related & helpful!</h2><br><br>
+                        <ul>
+                            <li style="color: orangered;"><a href="#" class="text-reset text-decoration-none ">Effective
+                                    Home Remedies For baldness</a></li><br>
+                            <li style="color: orangered;"><a href="#" class="text-reset text-decoration-none ">Effective
+                                    Home Remedies For Dry Scalp</a></li><br>
+                            <li style="color: orangered;"><a href="#" class="text-reset text-decoration-none ">Effective
+                                    Home Remedies For lice</a></li><br>
+                            <li style="color: orangered;"><a href="#" class="text-reset text-decoration-none ">Effective
+                                    Home Remedies For long hair</a></li><br>
+                            <li style="color: orangered;"><a href="#" class="text-reset text-decoration-none ">Effective
+                                    Home Remedies For healthy hair</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <a href="#" class="text-reset text-decoration-none ">
+                            <div class="text-center py-1 ho"
+                                style="border: 1px solid rgb(228, 225, 225); border-radius: 40px; ">
+                                <img class="img-fluid" style="border-radius: 40px;" src="..\img\remedies\equipment.png">
+                                <span style="font-size: 20px; font-weight: bold;">Order Hair Care Equipments</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <a href="#" class="text-reset text-decoration-none ho">
+                            <div class="text-center py-1 ho"
+                                style="border: 1px solid rgb(228, 225, 225); border-radius: 40px;">
+                                <img class="img-fluid" style="border-radius: 40px;" src="..\img\remedies\product.png">
+                                <span style="font-size: 20px; font-weight: bold;">Order Hair Care Products</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mt-5 ">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-2.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-md-6 mt-5">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Humayun Aziz</span></p>
+
+                    </div>
+                    <!-- ----------- -->
+                    <div class="col-md-6 mt-5">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-3.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-md-6 mt-5">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-4.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="col-md-6 mt-5">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-5.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-md-6 mt-5">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="col-md-6 mt-5">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-5.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-md-6 mt-5">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row mt-5 mb-5 ">
+                    <div class="row justify-content-sm-between">
+                        <div class="col-sm-3  ">
+                            <h2>Comments</h2>
+                        </div>
+                        <div class="col-sm-5 text-sm-end "><button class="comntt" disabled><i
+                                    class="fa-regular fa-message"></i> &nbsp; Leave Your Comments</button></div>
+                    </div>
+
+                    <div class="col-md-12 mt-5">
+                        <p style="font-size: 20px;">0 Comments</p>
+                    </div>
+
+
+                    <hr class="mb-5">
+
+
+                    <form class="pb-5 py-5"
+                        style="background-color: rgb(241, 240, 240); border-radius: 20px; max-width:500px;margin:auto">
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="Name" name="usrnm" required>
+                        </div>
+
+                        <div class="input-container">
+                            <i class="fa-solid fa-link"></i>
+
+                            <input class="input-field" type="url" placeholder="Website" name="email" required>
+                        </div>
+
+                        <div class="input-container">
+                            <i class="fa-solid fa-pen-to-square"></i>
+
+                            <textarea name="" id="" cols="60" rows="2" placeholder="Write a Comment"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-formy">Post</button>
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
+            <!-- aside start -->
+            <div class="col-md-3">
+                <div class="row">
+                    <h3 style="margin-top: 65px;">Suggestions</h3>
+                    <hr>
+
+                    <div class="col-6 col-md-12 mt-3 ">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-2.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12 mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Humayun Aziz</span></p>
+
+                    </div>
+                    <!-- ----------- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-3.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-4.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-5.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+
+                    <div class="col-6 col-md-12  mt-3 ">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-2.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Humayun Aziz</span></p>
+
+                    </div>
+                    <!-- ----------- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-3.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-4.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-5.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <div class="col-6 col-md-12  mt-3 ">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-2.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Humayun Aziz</span></p>
+
+                    </div>
+                    <!-- ----------- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-3.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-4.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="col-6 col-md-12  mt-3">
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-5.jpg"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Wahaj Ansari</span></p>
+                    </div>
+                    <div class="col-6 col-md-12  mt-3">
+
+                        <a href="#" class="text-decoration-none text-reset"> <img src="..\img\remedies\sug-1.png"
+                                width="100%" class="img-fluid" alt=""><br><br>
+
+                            <p style="font-weight: bold;">What Are Jade Combs, and Can They Actually Improve Circulation
+                                and Hair Growth?</p>
+                        </a>
+                        <p>By <span style="color: rgb(9, 134, 156);">Imran Khan</span></p>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- aside end -->
+        </div>
+
+
+        <div class="row justify-content-center  ">
+            <div class="col-10 mb-5">
+                <h2> Article Writer & Trichologist</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center  ">
+            <div class="col-sm-5 align-self-center ">
+                <h3 style="color: orangered;">Kate Evans</h3>
+                <p>With a wealth of experience in the field <b>Trichology</b> , I am a passionate advocate for hair and
+                    scalp health. Over the years, I have diligently studied the intricate science behind hair growth,
+                    disorders, and treatments. Through personalized consultations and evidence-based solutions, I strive
+                    to empower individuals to embrace their hair's full potential and regain confidence in their unique
+                    beauty.</p>
+
+
+            </div>
+            <div class="col-sm-5 mt-5 mt-sm-0 text-center align-self-center " id="tric">
+                <img src="..\img\remedies\writer.jpg" style="border: 1px solid orangered; border-radius: 19px;"
+                    class="img-fluid" alt="Avatar">
+            </div>
+
+
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-5 align-self-center">
+                <H3 style="color: orangered;">Henry Smith</H3>
+                <p>
+                    As a healthcare <b>writer</b> , I combine my passion for writing with my deep understanding of the
+                    healthcare industry to inform, educate, and inspire readers about the ever-evolving world of medical
+                    advancements and patient care.</p>
+            </div>
+            <div class="col-sm-5 text-center align-self-center ">
+                <img src="..\img\remedies\dr.jpg" style="border: 1px solid orangered; border-radius: 19px;"
+                    class="img-fluid" alt="Avatar">
+            </div>
+            <div class="col-10 mt-5">
+                <hr>
+            </div>
+        </div>
+
+
+        <!-- body end -->
+
+
+
+
+        <!-- footer section start -->
+        <div id="footer" class="row mt-5" style="background-color: rgb(34, 34, 34); color: white;">
+            <!-- CONTACT DETAILS -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>CONTACT DETAILS</strong></h4>
+
+                <div class="location mt-5" style="display: flex;">
+                    <img src=".\icons\icons8-location-50.png" style="height: 25px;">
+                    <p style="margin-left: 10px;">156-157, Block 3, BYJCHS, Bahadurabad
+                        Karachi, Pakistan</p>
+                </div>
+
+                <div class="call" style="display: flex;">
+                    <img src=".\icons\icons8-call-50 (1).png" style="height: 25px;">
+                    <p style="margin-left: 10px;">(021) 111-624-333
+                        (111-ALLURE)</p>
+                </div>
+
+                <div class="time" style="display: flex;">
+                    <img src=".\icons\icons8-time-32.png" style="height: 25px;">
+                    <p style="margin-left: 10px;">Customer Support: 7 Days a Week,
+                        9:00am - 10:00pm</p>
+                </div>
+
+            </div>
+            <!-- CONTACT DETAILS -->
+
+            <!-- CUSTOMER SERVICES -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>CUSTOMER SERVICES</strong></h4>
+                <p class="mt-3">Contact Us</p>
+                <p>Delivery Info</p>
+                <p>FAQs</p>
+                <p>Allure Beauty</p>
+            </div>
+            <!-- CUSTOMER SERVICES -->
+
+            <!-- INFORMATION -->
+            <div class="col-sm-12 col-md-6 col-lg-2 mt-3">
+                <h4><strong>INFORMATION</strong></h4>
+                <p class="mt-5">Return & Refund</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <!-- INFORMATION -->
+
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                <h4><strong>SUBSCRIBE OUR NEWSLETTER</strong></h4>
+                <p class="mt-5">Get the latest offersand promotions!</p>
+                <!-- for input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Your E-mail"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                </div>
+                <!-- for input end -->
+                <!-- <input type="text" placeholder="Enter Your E-mail" style="padding: 7px 7px; width: 290px;"><button  type="button" class="btn btn-primary" style="padding: 7px 7px;">Subscribe</button> -->
+                <a href="https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.naheed.naheedpk"
+                    target="_blank"> <img width="136px" src="https://media.naheed.pk/imageblock_image/g/e/getapp.png"
+                        loading="lazy" class="img-fluid mt-2"></a>
+
+            </div>
+            <!-- SUBSCRIBE OUR NEWSLETTER -->
+        </div>
+        <div class="row" style="background-color: rgb(34, 34, 34); color: white; margin-top: 1px;">
+            <div class="col-md-6 order-2 order-md-1 mt-5" style="display: flex; justify-content: space-around;">
+                <p>Copyright © 2023 Allure beauty.pk. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 order-1 order-md-2  mt-5">
+                <img class="img-responsive paypal img-fluid" loading="lazy"
+                    src="https://media.naheed.pk/wysiwyg/paymenticons-4-10-2022_v2.png" alt="Payment">
+            </div>
+        </div>
+        <!-- footer section end -->
+
+    </div>
+
+
+    <!-- share button start -->
+    <script>
+        document.getElementById('facebookShareButton').addEventListener('click', function () {
+            var url = 'https://www.your-website-url.com'; // Replace with your website URL
+            var encodedUrl = encodeURIComponent(url);
+            var facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl;
+
+            window.open(facebookShareUrl, '_blank');
+        });
+
+        document.getElementById('twitterShareButton').addEventListener('click', function () {
+            var url = 'https://www.your-website-url.com'; // Replace with your website URL
+            var encodedUrl = encodeURIComponent(url);
+            var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodedUrl;
+
+            window.open(twitterShareUrl, '_blank');
+        }); 
+    </script>
+    <!-- share button end -->
+
+    </div>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
